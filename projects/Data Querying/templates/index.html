@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GenAI Data Query Demo</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2rem auto; max-width: 900px; line-height: 1.6; }
+        .card { border: 1px solid #d8dce6; border-radius: 10px; padding: 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
+        form { display: flex; gap: 0.5rem; margin: 1rem 0; flex-wrap: wrap; }
+        input[type="text"] { flex: 1; min-width: 280px; padding: 0.7rem; border: 1px solid #c6ccd8; border-radius: 6px; }
+        input[type="submit"] { padding: 0.7rem 1rem; border: 0; border-radius: 6px; background: #2563eb; color: white; cursor: pointer; }
+        .result { margin-top: 1rem; padding: 1rem; background: #f8fafc; border-left: 4px solid #2563eb; white-space: pre-wrap; }
+        .examples { color: #475569; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Ask your data question</h1>
+        <p>This portfolio demo turns natural-language questions into safe SQLite queries and summarizes the results for you.</p>
+        <form method="post">
+            <input type="text" id="text" name="text" placeholder="Example: Which customers spent the most in March?" value="{{ question }}">
+            <input type="submit" value="Run demo">
+        </form>
+        <p class="examples">Try: “Which customers spent the most in March?” or “Show total sales by product.”</p>
+
+        {% if result %}
+            <h2>Answer</h2>
+            <div class="result">{{ result }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
