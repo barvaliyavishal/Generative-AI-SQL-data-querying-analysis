@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/resources/__init__.py
+src/resources/main.py
+src/resources_project.egg-info/PKG-INFO
+src/resources_project.egg-info/SOURCES.txt
+src/resources_project.egg-info/dependency_links.txt
+src/resources_project.egg-info/top_level.txt
