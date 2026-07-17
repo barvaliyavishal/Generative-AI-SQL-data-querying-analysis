@@ -57,6 +57,12 @@ Open http://localhost:5000 and try questions like:
 - "Which customers spent the most in March?"
 - "Show total sales by product for 2023."
 
+Demo
+
+If you'd like a quick visual, I dropped a short demo GIF showing the full flow (question → generated SQL → results → summary):
+
+![Demo GIF](assets/demo.gif)
+
 Safety & limitations
 - The app enforces read-only `SELECT` queries and blocks mutation tokens (`insert`, `update`, `delete`, `drop`, `alter`, `create`, `pragma`).
 - Multiple-statement queries and overly long inputs are rejected; validation lives in `run_query()` inside `app.py`.
